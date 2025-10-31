@@ -1,3 +1,11 @@
 OOPS:
 Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to structure software.
 It helps make programs modular, reusable, maintainable, and scalable.
+
+Class → Blueprint/template for creating objects.
+
+Object → Instance of a class that holds actual data and behavior.
+
+1) INHERITANCE :
+      1)Inheritance is an OOP concept where one class (child/derived class) inherits the members (fields, properties, methods) of another class (parent/base class).
+      2)It helps in code reusability, method overriding, and hierarchical classification.
