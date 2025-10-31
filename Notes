@@ -76,3 +76,72 @@ class Program
 4) Multiple Inheritance:
    Multiple inheritance is not supported directly to avoid ambiguity, but can be achieved through interfaces. Because, if 2 parent class 
    have same method, compiler doesnot know which one to call.
+
+5) Hybrid Inheritance:
+   Combination of two or more inheritance types — usually involves classes + interfaces.
+   Mix of hierarchical + multiple inheritance.
+
+  public class Animal
+{
+    public void Eat() => Console.WriteLine("Eating...");
+}
+
+public interface IRun
+{
+    void Run();
+}
+
+public interface IJump
+{
+    void Jump();
+}
+
+public class Dog : Animal, IRun, IJump
+{
+    public void Run() => Console.WriteLine("Running...");
+    public void Jump() => Console.WriteLine("Jumping...");
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog d = new Dog();
+        d.Eat();
+        d.Run();
+        d.Jump();
+    }
+}
+
+example: 
+public class Vehicle
+{
+    public void Start() => Console.WriteLine("Vehicle starting...");
+}
+
+public interface IRefuelable
+{
+    void Refuel();
+}
+
+public class Car : Vehicle, IRefuelable
+{
+    public void Refuel() => Console.WriteLine("Car refueling...");
+}
+
+public class ElectricCar : Car
+{
+    public void Charge() => Console.WriteLine("Electric car charging...");
+}
+
+class Program
+{
+    static void Main()
+    {
+        ElectricCar tesla = new ElectricCar();
+        tesla.Start();   
+        tesla.Refuel();  
+        tesla.Charge(); 
+    }
+}
+
